@@ -1,0 +1,264 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI,sans-serif;
+}
+
+body{
+background:#fff;
+color:#333;
+}
+
+.navbar{
+height:80px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:0 30px;
+border-bottom:1px solid #f3cfcf;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+font-size:18px;
+color:#d62828;
+font-weight:600;
+}
+
+.logo-icon{
+width:45px;
+height:45px;
+border-radius:50%;
+background:#d62828;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+nav{
+display:flex;
+gap:40px;
+}
+
+nav a{
+text-decoration:none;
+color:#777;
+font-size:16px;
+}
+
+.user-avatar{
+width:45px;
+height:45px;
+border-radius:50%;
+background:#ffe7e7;
+color:#d62828;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:bold;
+}
+
+.dashboard-container{
+display:flex;
+}
+
+.sidebar{
+width:270px;
+min-height:100vh;
+border-right:1px solid #f1d2d2;
+}
+
+.sidebar ul{
+list-style:none;
+}
+
+.sidebar li{
+padding:25px 30px;
+display:flex;
+gap:15px;
+align-items:center;
+font-size:16px;
+color:#777;
+}
+
+.sidebar li.active{
+background:#fff1f1;
+color:#d62828;
+}
+
+.logout{
+padding:30px;
+border-top:1px solid #f1d2d2;
+color:#d62828;
+display:flex;
+gap:15px;
+}
+
+.content{
+flex:1;
+padding:40px;
+}
+
+.subtitle{
+color:#777;
+margin-top:5px;
+margin-bottom:30px;
+}
+
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+margin-bottom:25px;
+}
+
+.stat-card{
+border:1px solid #f3cfcf;
+border-radius:20px;
+padding:18px;
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.stat-icon{
+width:55px;
+height:55px;
+border-radius:50%;
+background:#fff1f1;
+display:flex;
+justify-content:center;
+align-items:center;
+color:#d62828;
+}
+
+.profile-section{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+margin-bottom:25px;
+}
+
+.card,
+.table-card{
+border:1px solid #f3cfcf;
+border-radius:25px;
+padding:30px;
+}
+
+.card h3{
+color:#d62828;
+margin-bottom:25px;
+}
+
+.status-row{
+display:flex;
+justify-content:space-between;
+margin-bottom:20px;
+}
+
+.status{
+padding:8px 20px;
+border-radius:20px;
+}
+
+.available{
+background:#e7f3d6;
+color:#4d7d28;
+}
+
+button{
+padding:14px 25px;
+border-radius:15px;
+border:1px solid #eee;
+background:#fff;
+cursor:pointer;
+}
+
+.profile-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px;
+}
+
+.profile-grid small{
+color:#888;
+}
+
+.profile-grid h4{
+margin-top:8px;
+}
+
+.card-header{
+display:flex;
+justify-content:space-between;
+margin-bottom:20px;
+}
+
+.card-header h3,
+.card-header a{
+color:#d62828;
+text-decoration:none;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+table th,
+table td{
+padding:15px;
+border-bottom:1px solid #f3d9d9;
+text-align:left;
+}
+
+.red{
+color:#d62828;
+}
+
+.orange{
+color:#b86f00;
+}
+
+.donor{
+display:flex;
+align-items:center;
+padding:18px 0;
+border-bottom:1px solid #f3d9d9;
+gap:20px;
+}
+
+.avatar{
+width:60px;
+height:60px;
+border-radius:50%;
+background:#ffe3e3;
+color:#d62828;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:22px;
+}
+
+.pink{
+background:#ffe6f1;
+}
+
+.blue{
+background:#e4eeff;
+color:#3b6fd8;
+}
+
+.donor-info{
+flex:1;
+}
+
+.blood{
+font-size:24px;
+color:#d62828;
+}

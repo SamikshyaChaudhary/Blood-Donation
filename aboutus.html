@@ -15,7 +15,7 @@
 
     <nav class="nav">
       <div class="logo">
-        <i class="fas fa-heartbeat"></i>
+        <i class="fas fa-droplet"></i>
         JeevanConnect
       </div>
 
@@ -27,18 +27,162 @@
           <li><a href="findDonor.html">Find Donors</a></li>
           <li><a href="requestBlood.html">Request Blood</a></li>
           <li><a href="becomeDonor.html">Become a Donor</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
         </ul>
       </div>
 
       <div class="auth-buttons">
-        <button class="btn login">Login</button>
-        <button class="btn register">Register</button>
+        <a href = "login.html">
+        <button class="btn login">Login</button></a>
+        <a href = "registration.html">
+        <button class="btn register">Register</button></a>
 
       </div>
     </nav>
 
   </header>
-    about section
+    <div class="container">
+        <main>
+            
+            <section class="card-section">
+                <div class="about-hero">
+                    <h1>About <span class="highlight-text">JeevanConnect</span></h1>
+                    <p>A local blood donor network connecting willing donors with patients in need — fast, free, and community-driven.</p>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h2 id="stat-donors">120+</h2>
+                        <p>Donors</p>
+                    </div>
+                    <div class="stat-item">
+                        <h2 id="stat-requests">85+</h2>
+                        <p>Requests</p>
+                    </div>
+                    <div class="stat-item">
+                        <h2 id="stat-cities">10+</h2>
+                        <p>Cities</p>
+                    </div>
+                    <div class="stat-item">
+                        <h2 id="stat-groups">25+</h2>
+                        <p>Blood Groups</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card-section two-column-grid">
+                <div class="col">
+                    <h2>Who We <span class="highlight-text">Are</span></h2>
+                    <p>JeevanConnect was founded in 2024 by students and health advocates in Lumbini Province to solve the blood shortage problem in local hospitals.</p>
+                    <p>Our platform is completely free and connects voluntary donors with patients who urgently need blood — verified, fast, and reliable.</p>
+                </div>
+                <div class="col">
+                    <h2>Our <span class="highlight-text">Mission</span></h2>
+                    <p>No one should lose their life because blood was unavailable. We build real-time, trusted donor networks across Nepal.</p>
+                    <p>We also run community awareness drives, school campaigns, and work with local NGOs to promote voluntary blood donation.</p>
+                </div>
+            </section>
+
+            <section class="card-section values-section">
+                <h2>Our Core <span class="highlight-text">Values</span></h2>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <h3>❤️ Compassion</h3>
+                        <p>Every decision is guided by empathy for patients and families in need.</p>
+                    </div>
+                    <div class="value-card">
+                        <h3>🛡️ Trust & Safety</h3>
+                        <p>All donors are verified. Privacy and data confidentiality are non-negotiable.</p>
+                    </div>
+                    <div class="value-card">
+                        <h3>🌐 Community</h3>
+                        <p>Built by and for the community of Nepal, not for profit.</p>
+                    </div>
+                    <div class="value-card">
+                        <h3>⚡ Speed</h3>
+                        <p>In emergencies every minute matters. Instant donor-patient connection.</p>
+                    </div>
+                    <div class="value-card">
+                        <h3>🤝 Inclusivity</h3>
+                        <p>Anyone eligible can donate. All communities and blood groups welcome.</p>
+                    </div>
+                    <div class="value-card">
+                        <h3>🔍 Transparency</h3>
+                        <p>No hidden steps. Donors see requests, recipients see availability.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card-section team-section">
+                <h2>Meet Our <span class="highlight-text">Team</span></h2>
+                <div class="team-grid">
+                    
+                    <div class="team-card">
+                        <div class="avatar-circle">MA</div>
+                        <h3>Mina Adhikari</h3>
+                        <div class="role">Project Lead</div>
+                        <p class="bio">Bicte student passionate about health-tech.</p>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="avatar-circle">SC</div>
+                        <h3>Samikshya Chaudhary</h3>
+                        <div class="role">UI/UX Designer</div>
+                        <p class="bio">Crafts clean interfaces with empathy.</p>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="avatar-circle">AD</div>
+                        <h3>Anamika Dhakal</h3>
+                        <div class="role">Backend Developer</div>
+                        <p class="bio">Builds secure, fast systems.</p>
+                    </div>
+
+              
+
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script>
+        // Simple Interaction Functions
+        function handleLogin() {
+            alert("Redirecting to Login page...");
+        }
+
+        function handleRegister() {
+            alert("Redirecting to Registration page...");
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            animateCount("stat-donors", 120);
+            animateCount("stat-requests", 85);
+            animateCount("stat-cities", 10);
+            animateCount("stat-groups", 25);
+        });
+
+        function animateCount(id, maxVal) {
+            let current = 0;
+            const element = document.getElementById(id);
+            const duration = 1000; 
+            const steps = 20;
+            const increment = maxVal / steps;
+            const intervalTime = duration / steps;
+
+            const counter = setInterval(() => {
+                current += increment;
+                if (current >= maxVal) {
+                    element.innerText = maxVal + "+";
+                    clearInterval(counter);
+                } else {
+                    element.innerText = Math.floor(current) + "+";
+                }
+            }, intervalTime);
+        }
+    </script>
+</body>
+</html>
 </body>
 </html>

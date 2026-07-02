@@ -8,7 +8,7 @@
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    <title>Request Blood</title>
+    <title>Become a Donor</title>
 </head>
 <body>
     <!-- HEADER -->
@@ -17,7 +17,7 @@
 
     <nav class="nav">
       <div class="logo">
-        <i class="fas fa-heartbeat"></i>
+        <i class="fas fa-droplet"></i>
         JeevanConnect
       </div>
 
@@ -29,21 +29,245 @@
           <li><a href="findDonor.html">Find Donors</a></li>
           <li><a href="requestBlood.html">Request Blood</a></li>
           <li><a href="becomeDonor.html">Become a Donor</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
         </ul>
       </div>
 
       <div class="auth-buttons">
-        <button class="btn login">Login</button>
-        <button class="btn register">Register</button>
+        <a href = "login.html">
+        <button class="btn login">Login</button></a>
+        <a href = "registration.html">
+        <button class="btn register">Register</button></a>
 
       </div>
     </nav>
 
      </header>
-     <main>
-        Become a donor page
-     </main>
+     
+
+    <div>
+        <main>
+            
+            <section class="hero-banner">
+                <h1>Become a Blood Donor</h1>
+                <p>One donation can save up to three lives. Register today and become part of Nepal's voluntary blood donor network.</p>
+                
+                <div class="hero-stats">
+                    <div class="stat-box">
+                        <h2>120+</h2>
+                        <p>Donors Registered</p>
+                    </div>
+                    <div class="stat-box">
+                        <h2>85+</h2>
+                        <p>Lives Saved</p>
+                    </div>
+                    <div class="stat-box">
+                        <h2>10+</h2>
+                        <p>Cities Covered</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card-panel eligibility-grid">
+                <div class="eligibility-col">
+                    <h2 class="color-green">✓ You CAN Donate If...</h2>
+                    <ul class="eligibility-list">
+                        <li><span class="icon color-green">✓</span> Age 18–65 years old</li>
+                        <li><span class="icon color-green">✓</span> Weight at least 50 kg</li>
+                        <li><span class="icon color-green">✓</span> In good general health today</li>
+                        <li><span class="icon color-green">✓</span> Hemoglobin ≥ 12.5 g/dL (F), ≥ 13.5 (M)</li>
+                        <li><span class="icon color-green">✓</span> 3+ months since last donation</li>
+                        <li><span class="icon color-green">✓</span> No alcohol in last 24 hours</li>
+                        <li><span class="icon color-green">✓</span> Adequate sleep (≥ 6 hours)</li>
+                    </ul>
+                </div>
+
+                <div class="eligibility-col">
+                    <h2 class="color-red">✕ Temporary Deferrals</h2>
+                    <ul class="eligibility-list">
+                        <li><span class="icon color-red">✕</span> Active fever or infection</li>
+                        <li><span class="icon color-red">✕</span> Recent surgery (6 months)</li>
+                        <li><span class="icon color-red">✕</span> Pregnancy or postpartum (6 months)</li>
+                        <li><span class="icon color-red">✕</span> HIV, Hepatitis B/C</li>
+                        <li><span class="icon color-red">✕</span> Tattoo or piercing (6 months)</li>
+                        <li><span class="icon color-red">✕</span> On antibiotics or blood thinners</li>
+                        <li><span class="icon color-red">✕</span> Recent malaria-risk travel (3 months)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="card-panel">
+                <h2 class="section-title">How It <span>Works</span></h2>
+                <div class="timeline-row">
+                    <div class="timeline-step">
+                        <div class="step-badge">1</div>
+                        <h3>Register</h3>
+                        <p>Fill out the form with your blood group and location.</p>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="step-badge">2</div>
+                        <h3>Get Called</h3>
+                        <p>A coordinator contacts you when your blood is needed.</p>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="step-badge">3</div>
+                        <h3>Screening</h3>
+                        <p>Quick vitals check at the hospital.</p>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="step-badge">4</div>
+                        <h3>Donate</h3>
+                        <p>Takes only 8–10 minutes safely.</p>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="step-badge">5</div>
+                        <h3>Rest</h3>
+                        <p>Refreshments, 15 min rest, then go home a hero!</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card-panel">
+                <h2 class="section-title">Donor <span>Registration Form</span></h2>
+                <p class="form-subtitle">Fill in your details to join JeevanConnect's donor network.</p>
+
+                <form id="donorForm" onsubmit="submitDonorForm(event)">
+                    <div class="form-grid">
+                        
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" placeholder="Enter your full name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dob">Date of Birth</label>
+                            <input type="date" id="dob" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bloodGroup">Blood Group</label>
+                            <select id="bloodGroup" required>
+                                <option value="" disabled selected>Select blood group</option>
+                                <option value="A+">A+</option>
+                                <option value="A-">A-</option>
+                                <option value="B+">B+</option>
+                                <option value="B-">B-</option>
+                                <option value="O+">O+</option>
+                                <option value="O-">O-</option>
+                                <option value="AB+">AB+</option>
+                                <option value="AB-">AB-</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="gender">Gender</label>
+                            <select id="gender" required>
+                                <option value="" disabled selected>Select gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" placeholder="98XXXXXXXX" pattern="[9][6-8][0-9]{8}" title="Please enter a valid 10-digit Nepali mobile number starting with 9" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="your@email.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="district">District</label>
+                            <select id="district" required>
+                                <option value="" disabled selected>Select district</option>
+                                <option value="Rupandehi">Rupandehi</option>
+                                <option value="Kapilvastu">Kapilvastu</option>
+                                <option value="Nawalparasi">Nawalparasi West</option>
+                                <option value="Palpa">Palpa</option>
+                                <option value="Gulmi">Gulmi</option>
+                                <option value="Arghakhanchi">Arghakhanchi</option>
+                                <option value="Kathmandu">Kathmandu</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="city">City / Municipality</label>
+                            <input type="text" id="city" placeholder="e.g. Butwal, Tansen..." required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lastDonation">Last Donation Date (if any)</label>
+                            <input type="date" id="lastDonation">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="availability">Availability</label>
+                            <select id="availability" required>
+                                <option value="Available" selected>Available</option>
+                                <option value="Unavailable">Unavailable</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="medicalConditions">Medical Conditions (Optional)</label>
+                            <textarea id="medicalConditions" placeholder="Any conditions or medications we should know about..."></textarea>
+                        </div>
+
+                    </div>
+
+                    <div class="privacy-alert">
+                        <span class="alert-icon">⚠️</span>
+                        <p>Your profile will be visible to patients searching for your blood group. Your number is only shared with verified requesters.</p>
+                    </div>
+
+                    <div class="form-action">
+                        <button type="submit" class="btn-submit">Register as Donor</button>
+                    </div>
+                </form>
+            </section>
+
+        </main>
+    </div>
+
+    <script>
+        // Header navigation placeholders
+        function navAction(actionType) {
+            alert(actionType + " modal/page link clicked.");
+        }
+
+        // Form submission processor
+        function submitDonorForm(event) {
+            event.preventDefault(); // Intercept page reload
+
+            // Collect form data values
+            const donorData = {
+                fullName: document.getElementById('fullName').value,
+                dob: document.getElementById('dob').value,
+                bloodGroup: document.getElementById('bloodGroup').value,
+                gender: document.getElementById('gender').value,
+                phone: document.getElementById('phone').value,
+                email: document.getElementById('email').value,
+                district: document.getElementById('district').value,
+                city: document.getElementById('city').value,
+                lastDonation: document.getElementById('lastDonation').value || "None",
+                availability: document.getElementById('availability').value,
+                medicalConditions: document.getElementById('medicalConditions').value || "None"
+            };
+
+            // Process payload (Simulated submission action)
+            console.log("Submitting Donor Profile Record:", donorData);
+            
+            alert("Thank you, " + donorData.fullName + "!\nYour donor profile data registration was received successfully.");
+            
+            // Optional cleanup reset
+            document.getElementById('donorForm').reset();
+        }
+    </script>
+</body>
+</html>
     
 </body>
 </html>

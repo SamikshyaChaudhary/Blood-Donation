@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <title>Search Donor</title>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+
+
+        <nav class="nav">
+            <div class="logo">
+                <i class="fas fa-droplet"></i>
+                JeevanConnect
+            </div>
+
+            <div class="navigation">
+
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="findDonor.html">Find Donors</a></li>
+                    <li><a href="requestBlood.html">Request Blood</a></li>
+                    <li><a href="becomeDonor.html">Become a Donor</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="auth-buttons">
+        <a href = "login.html">
+        <button class="btn login">Login</button></a>
+        <a href = "registration.html">
+        <button class="btn register">Register</button></a>
+
+      </div>
+        </nav>
+    </header>
+    <!-- CONTACT HEADER -->
+    <section class="contact-header">
+
+        <h1>Contact <span>Us</span></h1>
+
+        <p>
+            Have a question or urgent blood need?
+            We're here to help — reach out any time.
+        </p>
+
+    </section>
+
+    <!-- CONTACT CONTAINER -->
+    <section class="contact-container">
+
+        <!-- LEFT SIDE -->
+        <div class="contact-info">
+
+            <h2>Contact <span>Information</span></h2>
+
+            <!-- ADDRESS -->
+            <div class="info-box">
+
+                <div class="icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+
+                <div>
+                    <h3>Address</h3>
+
+                    <p>
+                        Budhachowk, Ramgram-2,<br>
+                        Nawalparasi, Lumbini Province
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- PHONE -->
+            <div class="info-box">
+
+                <div class="icon">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+
+                <div>
+                    <h3>Phone</h3>
+
+                    <p>
+                        +977-071-XXXXXX (Office)<br>
+                        +977-984-1234567 (Emergency 24/7)
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- EMAIL -->
+            <div class="info-box">
+
+                <div class="icon">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+
+                <div>
+                    <h3>Email</h3>
+
+                    <p>
+                        info@jeevanconnect.com.np<br>
+                        support@jeevanconnect.com.np
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- HOURS -->
+            <div class="info-box">
+
+                <div class="icon">
+                    <i class="fa-regular fa-clock"></i>
+                </div>
+
+                <div>
+                    <h3>Office Hours</h3>
+
+                    <p>
+                        Sun - Fri : 9:00 AM - 5:00 PM<br>
+                        Emergency line open 24/7
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="contact-form">
+
+            <h2>Send a <span>Message</span></h2>
+
+            <!-- TAGS -->
+            <div class="tags">
+
+                <button class="tag active-tag">
+                    General
+                </button>
+
+                <button class="tag">
+                    Blood Emergency
+                </button>
+
+                <button class="tag">
+                    Partnership
+                </button>
+
+                <button class="tag">
+                    Report Issue
+                </button>
+
+            </div>
+
+            <!-- FORM -->
+            <form id="contactForm">
+
+                <div class="row">
+
+                    <div class="input-box">
+                        <label class="label-name">Name</label>
+
+                        <input type="text" id="name" placeholder="Your name">
+                    </div>
+
+                    <div class="input-box">
+                        <label class="label-phone">Phone</label>
+
+                        <input type="text" id="phone" placeholder="98XXXXXXXX">
+                    </div>
+
+                </div>
+
+                <div class="input-box">
+                    <label class="label-email">Email</label>
+
+                    <input type="email" id="email" placeholder="your@email.com">
+                </div>
+
+                <div class="input-box">
+                    <label class="label-subject">Subject</label>
+
+                    <input type="text" id="subject" placeholder="What is this about?">
+                </div>
+
+                <div class="input-box">
+                    <label class="label-message">Message</label>
+
+                    <textarea id="message" placeholder="Write your message here...">
+          </textarea>
+                </div>
+
+                <button type="submit" class="send-btn">
+                    Send Message
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <!-- JS -->
+    <script src="contact.js"></script>
+
+</body>
+
+</html>

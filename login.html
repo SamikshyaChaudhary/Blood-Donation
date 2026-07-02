@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Login Page</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+  <header>
+
+
+    <nav class="nav">
+      <div class="logo">
+        <i class="fas fa-droplet"></i>
+        JeevanConnect
+      </div>
+
+      <div class="navigation">
+
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="findDonor.html">Find Donors</a></li>
+          <li><a href="requestBlood.html">Request Blood</a></li>
+          <li><a href="becomeDonor.html">Become a Donor</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="auth-buttons">
+        <a href = "login.html">
+        <button class="btn login">Login</button></a>
+        <a href = "registration.html">
+        <button class="btn register">Register</button></a>
+
+      </div>
+    </nav>
+    
+
+  </header>
+
+  <h1 class="page-title">Login Page</h1>
+
+  <section class="login-section">
+
+    <!-- Blur Background -->
+    <div class="blur-bg"></div>
+
+    <!-- Login Box -->
+    <div class="login-container">
+
+      <!-- Logo -->
+      <div class="logo">
+        <i class="fa-solid fa-droplet"></i>
+        <h2>JeevanConnect</h2>
+      </div>
+
+      <!-- Heading -->
+      <h1>Welcome Back!</h1>
+      <p class="subtitle">Login to your account</p>
+
+      <!-- Form -->
+      <form id="loginForm">
+
+        <!-- Email -->
+        <div class="input-box">
+
+          <label>Email</label>
+
+          <input type="email"
+          id="email"
+          placeholder="Enter your email">
+
+        </div>
+
+        <!-- Password -->
+        <div class="input-box">
+
+          <label>Password</label>
+
+          <div class="password-field">
+
+            <input type="password"
+            id="password"
+            placeholder="Enter your password">
+
+            <i class="fa-regular fa-eye"
+            id="togglePassword"></i>
+
+          </div>
+
+        </div>
+
+        <!-- Button -->
+        <button type="submit" class="login-btn">
+          Login
+        </button>
+
+      </form>
+
+      <!-- Forgot -->
+      <a href="#" class="forgot">
+        Forgot Password?
+      </a>
+
+      <hr>
+
+      <!-- Register -->
+      <p class="register-text">
+        Don't have an account?
+        <span>Register</span>
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+
+</body>
+</html>

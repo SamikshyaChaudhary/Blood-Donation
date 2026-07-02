@@ -1,49 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- CSS -->
-  <link rel="stylesheet" href="style.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <title>Request Blood</title>
 </head>
+
 <body>
     <!-- HEADER -->
-  <header>
+    <header>
 
 
-    <nav class="nav">
-      <div class="logo">
-        <i class="fas fa-heartbeat"></i>
-        JeevanConnect
+        <nav class="nav">
+            <div class="logo">
+                <i class="fas fa-droplet"></i>
+                JeevanConnect
+            </div>
+
+            <div class="navigation">
+
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="findDonor.html">Find Donors</a></li>
+                    <li><a href="requestBlood.html">Request Blood</a></li>
+                    <li><a href="becomeDonor.html">Become a Donor</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+           <div class="auth-buttons">
+        <a href = "login.html">
+        <button class="btn login">Login</button></a>
+        <a href = "registration.html">
+        <button class="btn register">Register</button></a>
+
       </div>
+        </nav>
 
-      <div class="navigation">
+    </header>
+    <main class="container">
+        <div class="card-wrapper">
+            
+            <section class="form-section">
+                <h2>Request Blood</h2>
+                <p class="subtitle">Fill the form below to request blood.</p>
+                
+                <form id="bloodRequestForm">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="patientName">Patient Name</label>
+                            <input type="text" id="patientName" placeholder="Enter patient name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="bloodGroup">Blood Group Needed</label>
+                            <select id="bloodGroup" required>
+                                <option value="" disabled selected>Select blood group</option>
+                                <option value="A+">A+</option>
+                                <option value="A-">A-</option>
+                                <option value="B+">B+</option>
+                                <option value="B-">B-</option>
+                                <option value="O+">O+</option>
+                                <option value="O-">O-</option>
+                                <option value="AB+">AB+</option>
+                                <option value="AB-">AB-</option>
+                            </select>
+                        </div>
 
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="aboutus.html">About Us</a></li>
-          <li><a href="findDonor.html">Find Donors</a></li>
-          <li><a href="requestBlood.html">Request Blood</a></li>
-          <li><a href="#">Become a Donor</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
-      </div>
+                        <div class="form-group">
+                            <label for="location">Location</label>
+                            <input type="text" id="location" placeholder="Enter location" required>
+                        </div>
 
-      <div class="auth-buttons">
-        <button class="btn login">Login</button>
-        <button class="btn register">Register</button>
+                        <div class="form-group">
+                            <label for="contactNumber">Contact Number</label>
+                            <input type="tel" id="contactNumber" placeholder="Enter contact number" required>
+                        </div>
 
-      </div>
-    </nav>
+                        <div class="form-group">
+                            <label for="urgencyLevel">Urgency Level</label>
+                            <select id="urgencyLevel" required>
+                                <option value="" disabled selected>Select urgency</option>
+                                <option value="low">Low</option>
+                                <option value="medium">Medium</option>
+                                <option value="high">High / Critical</option>
+                            </select>
+                        </div>
 
-     </header>
-     <main>
-        request blood page
-     </main>
-    
-</body>
-</html>
+                        <div class="form-group">
+                            <label for="message">Additional Message (Optional)</label>
+                            <textarea id="message" rows="3" placeholder="Enter any additional message..."></textarea>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Submit Request</button>
+                </form>
+            </section>
+
+            <section class="info-section">
+                <div class="illustration">
+                    <svg viewBox="0 0 200 200" width="150" height="150">
+                        <rect x="60" y="30" width="80" height="110" rx="15" fill="#f8f9fa" stroke="#ccc" stroke-width="3"/>
+                        <rect x="70" y="40" width="60" height="90" rx="10" fill="#d91e18"/>
+                        <path d="M92 70 h16 v30 h-16 z M85 77 h30 v16 h-30 z" fill="white"/>
+                        <path d="M90 30 V15 A10 10 0 0 1 110 15 V30" fill="none" stroke="#ccc" stroke-width="3"/>
+                        <path d="M100 140 Q 100 180, 135 160" fill="none" stroke="#d91e18" stroke-width="4"/>
+                        <path d="M135 160 C 120 135, 160 120, 160 145 C 160 120, 200 135, 185 160 L 160 185 Z" fill="#d91e18"/>
+                    </svg>
+                </div>
+
+                <div class="info-box">
+                    <p>Your request will be visible to available donors in your area.</p>
+                    <p><strong>Please provide accurate information.</strong></p>
+                </div>
+            </section>
+
+        </div>
+    </main>

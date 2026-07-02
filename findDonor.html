@@ -8,7 +8,7 @@
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    <title>Find Donor</title>
+    <title>Search Donor</title>
 </head>
 <body>
     <!-- HEADER -->
@@ -17,7 +17,7 @@
 
     <nav class="nav">
       <div class="logo">
-        <i class="fas fa-heartbeat"></i>
+        <i class="fas fa-droplet"></i>
         JeevanConnect
       </div>
 
@@ -29,21 +29,164 @@
           <li><a href="findDonor.html">Find Donors</a></li>
           <li><a href="requestBlood.html">Request Blood</a></li>
           <li><a href="becomeDonor.html">Become a Donor</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
         </ul>
       </div>
 
       <div class="auth-buttons">
-        <button class="btn login">Login</button>
-        <button class="btn register">Register</button>
+        <a href = "login.html">
+        <button class="btn login">Login</button></a>
+        <a href = "registration.html">
+        <button class="btn register">Register</button></a>
 
       </div>
     </nav>
 
      </header>
-     <main>
-        find donor page
-     </main>
-    
+
+  
+
+  <!-- SEARCH SECTION -->
+  <section class="search-section">
+<div class="search-content">
+    <h1>Search Donors</h1>
+    <p>Find available donors near you.</p>
+    </div>
+
+    <div class="search-box">
+
+      <div class="input-group">
+        <label>Blood Group</label>
+
+        <select id="blood">
+          <option>O+</option>
+          <option>A+</option>
+          <option>B+</option>
+          <option>AB+</option>
+        </select>
+      </div>
+
+      <div class="searchlocation">
+        <label>Location</label>
+
+        <select id="location">
+          <option>Butwal</option>
+          <option>Sunwal</option>
+          <option>Parasi</option>
+        </select>
+      </div>
+
+      <div class="option">
+        <label>Availability</label>
+
+        <select id="availability">
+          <option>Available</option>
+          <option>Unavailable</option>
+        </select>
+      </div>
+
+      <button id="searchBtn">Search</button>
+
+    </div>
+
+  </section>
+
+  <!-- DONORS -->
+  <section class="donor-section">
+
+    <h2>Found 3 Donors</h2>
+
+    <!-- CARD 1 -->
+    <div class="donor-card">
+
+      <img src="C:\Users\Prabeen\Downloads\WhatsApp Image 2026-05-26 at 11.36.56 AM.jpeg" alt="">
+
+      <div class="donor-info">
+
+        <h3>Mina Adhikari</h3>
+
+        <p>
+          <i class="fa-solid fa-location-dot"></i>
+          Butwal, Rupandehi
+        </p>
+
+      </div>
+
+      <div class="blood-group">A+</div>
+
+      <div class="phone">
+        <i class="fa-solid fa-phone"></i>
+        9800001200
+      </div>
+
+      <div class="status">Available</div>
+
+      <button class="contact-btn">Contact</button>
+
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="donor-card">
+
+      <img src="C:\Users\Prabeen\Downloads\WhatsApp Image 2026-05-25 at 11.45.28 PM.jpeg" alt="">
+
+      <div class="donor-info">
+
+        <h3>Samikshya Chaudhary</h3>
+
+        <p>
+          <i class="fa-solid fa-location-dot"></i>
+          Parasi,Nawalparasi
+        </p>
+
+      </div>
+
+      <div class="blood-group">AB+</div>
+
+      <div class="phone">
+        <i class="fa-solid fa-phone"></i>
+        9800000000
+      </div>
+
+      <div class="status">Available</div>
+
+      <button class="contact-btn">Contact</button>
+
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="donor-card">
+
+      <img src="C:\Users\Prabeen\Downloads\WhatsApp Image 2026-05-25 at 11.43.16 PM.jpeg" alt="">
+
+      <div class="donor-info">
+
+        <h3>Anamika Dhakal</h3>
+
+        <p>
+          <i class="fa-solid fa-location-dot"></i>
+          Sunwal,Nawalparasi
+        </p>
+
+      </div>
+
+      <div class="blood-group">A+</div>
+
+      <div class="phone">
+        <i class="fa-solid fa-phone"></i>
+        9812345678
+      </div>
+
+      <div class="status">Available</div>
+
+      <button class="contact-btn">Contact</button>
+
+    </div>
+
+  </section>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+
 </body>
 </html>
