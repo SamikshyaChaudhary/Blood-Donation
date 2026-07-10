@@ -19,7 +19,7 @@ document.querySelector(".find-btn")
 
 
 
-//login page
+//login page.js
 // PASSWORD SHOW / HIDE
 
 let password =
