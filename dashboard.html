@@ -1,77 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>JeevanConnect - Dashboard</title>
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <!-- CSS -->
     <link rel="stylesheet" href="dashboard.css">
 </head>
+
 <body>
 
-    <!-- Header -->
-    <header>
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
         <div class="logo">
             <i class="fa-solid fa-droplet"></i>
             <span>JeevanConnect</span>
         </div>
 
-        <nav>
-           <a href="index.html">Home</a>
-          <a href="aboutus.html">About Us</a>
-          <a href="findDonor.html">Find Donors</a>
-          <a href="requestBlood.html">Request Blood</a>
-          <a href="becomeDonor.html">Become a Donor</a>
+        <nav class="navbar">
+            <a href="home.html">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="findDonor.html">Find Donors</a>
+            <a href="requestBlood.html">Request Blood</a>
+            <a href="becomeDonor.html">Become a Donor</a>
+            <a href="contactus.html">Contact Us</a>
         </nav>
 
-        <div class="profile">
-            <div class="avatar">AS</div>
+        <div class="profile-circle">
+            AS
         </div>
+
     </header>
+
+    <!-- ================= MAIN ================= -->
 
     <div class="container">
 
         <!-- Sidebar -->
+
         <aside class="sidebar">
 
             <h4>DONOR PANEL</h4>
 
             <ul>
 
-                <li>
-                    <a href="#">
+                <li class="active">
+                    <a href="dashboard.html">
                         <i class="fa-solid fa-table-columns"></i>
                         Dashboard
                     </a>
                 </li>
 
                 <li>
-                    <a href="#">
-                        <i class="fa-solid fa-user"></i>
+                    <a href="myprofile.html">
+                        <i class="fa-regular fa-user"></i>
                         My Profile
                     </a>
                 </li>
 
-                <li class="active">
-                    <a href="#">
+                <li>
+                    <a href="myrequests.html">
                         <i class="fa-solid fa-bars"></i>
                         My Requests
                     </a>
                 </li>
 
                 <li>
-                    <a href="#">
-                        <i class="fa-solid fa-heart"></i>
+                    <a href="mydonations.html">
+                        <i class="fa-regular fa-heart"></i>
                         My Donations
                     </a>
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="changepassword.html">
                         <i class="fa-solid fa-lock"></i>
                         Change Password
                     </a>
@@ -80,47 +90,176 @@
             </ul>
 
             <div class="logout">
-                <a href="#">
+
+                <a href="logout.html">
                     <i class="fa-solid fa-right-from-bracket"></i>
                     Logout
                 </a>
+
             </div>
 
         </aside>
 
-        <!-- Main Content -->
+        <!-- Content -->
+
         <main class="content">
 
-            <h1>My Requests</h1>
+            <h1>Welcome, Aman Shrestha</h1>
 
             <p class="subtitle">
-                Blood requests you've submitted or responded to.
+                Here's your account overview.
             </p>
 
-            <!-- Tabs -->
-            <div class="tabs">
+            <!-- ================= STAT CARDS ================= -->
 
-                <button class="active">All</button>
-                <button>Pending</button>
-                <button>Fulfilled</button>
-                <button>Cancelled</button>
+            <div class="stats">
+
+                <div class="card">
+
+                    <div class="icon">
+                        <i class="fa-regular fa-droplet"></i>
+                    </div>
+
+                    <h2>3</h2>
+
+                    <p>Total Donations</p>
+
+                </div>
+
+                <div class="card">
+
+                    <div class="icon">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+
+                    <h2>2</h2>
+
+                    <p>Active Requests Nearby</p>
+
+                </div>
+
+                <div class="card">
+
+                    <div class="icon">
+                        <i class="fa-regular fa-clock"></i>
+                    </div>
+
+                    <h2>May 10</h2>
+
+                    <p>Last Donation Date</p>
+
+                </div>
+
+                <div class="card">
+
+                    <div class="icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+
+                    <h2>Butwal</h2>
+
+                    <p>Your Location</p>
+
+                </div>
 
             </div>
 
-            <!-- Table -->
-            <div class="table-card">
+            <!-- ================= SECOND ROW ================= -->
+
+            <div class="grid-two">
+
+                <!-- Availability -->
+
+                <div class="box">
+
+                    <h3>Availability Status</h3>
+
+                    <p>You are currently:</p>
+
+                    <span class="available">
+                        ● Available
+                    </span>
+
+                    <button id="statusBtn">
+                        Change Status
+                    </button>
+
+                </div>
+
+                <!-- Profile -->
+
+                <div class="box">
+
+                    <h3>Profile Summary</h3>
+
+                    <div class="profile-grid">
+
+                        <div>
+
+                            <small>Blood Group</small>
+
+                            <h4>O+</h4>
+
+                        </div>
+
+                        <div>
+
+                            <small>Location</small>
+
+                            <h4>Butwal, Rupandehi</h4>
+
+                        </div>
+
+                        <div>
+
+                            <small>Phone</small>
+
+                            <h4>9841234567</h4>
+
+                        </div>
+
+                        <div>
+
+                            <small>Member Since</small>
+
+                            <h4>May 10, 2024</h4>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- ================= TABLE ================= -->
+
+            <div class="table-box">
+
+                <div class="table-header">
+
+                    <h3>Recent Requests Near You</h3>
+
+                    <a href="#">View All</a>
+
+                </div>
 
                 <table>
 
                     <thead>
 
                         <tr>
+
                             <th>PATIENT NAME</th>
+
                             <th>BLOOD GROUP</th>
-                            <th>HOSPITAL</th>
+
+                            <th>LOCATION</th>
+
                             <th>URGENCY</th>
-                            <th>STATUS</th>
+
                             <th>DATE</th>
+
                         </tr>
 
                     </thead>
@@ -128,39 +267,57 @@
                     <tbody>
 
                         <tr>
-                            <td>Suresh Pandey</td>
+
+                            <td>Suresh P.</td>
+
                             <td>O+</td>
-                            <td>Butwal City Hospital</td>
-                            <td><span class="badge high">High</span></td>
-                            <td><span class="badge pending">Pending</span></td>
+
+                            <td>Butwal</td>
+
+                            <td>
+                                <span class="badge high">
+                                    High
+                                </span>
+                            </td>
+
                             <td>May 15, 2024</td>
+
                         </tr>
 
                         <tr>
-                            <td>Anita Sharma</td>
-                            <td>O+</td>
-                            <td>Lumbini Provincial Hospital</td>
-                            <td><span class="badge high">High</span></td>
-                            <td><span class="badge fulfilled">Fulfilled</span></td>
-                            <td>May 13, 2024</td>
-                        </tr>
 
-                        <tr>
-                            <td>Ramesh KC</td>
+                            <td>Ramesh K.</td>
+
                             <td>O+</td>
-                            <td>Devdaha Medical College</td>
-                            <td><span class="badge medium">Medium</span></td>
-                            <td><span class="badge pending">Pending</span></td>
+
+                            <td>Butwal</td>
+
+                            <td>
+                                <span class="badge medium">
+                                    Medium
+                                </span>
+                            </td>
+
                             <td>May 14, 2024</td>
+
                         </tr>
 
                         <tr>
-                            <td>Bina Thapa</td>
+
+                            <td>Anita S.</td>
+
                             <td>O+</td>
-                            <td>Butwal City Hospital</td>
-                            <td><span class="badge low">Low</span></td>
-                            <td><span class="badge cancelled">Cancelled</span></td>
-                            <td>Apr 28, 2024</td>
+
+                            <td>Butwal</td>
+
+                            <td>
+                                <span class="badge high">
+                                    High
+                                </span>
+                            </td>
+
+                            <td>May 13, 2024</td>
+
                         </tr>
 
                     </tbody>
@@ -173,7 +330,9 @@
 
     </div>
 
-    <script src="my_requests.js"></script>
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 
 </body>
+
 </html>

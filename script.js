@@ -3,7 +3,7 @@
 document.querySelector(".donate-btn")
 .addEventListener("click", function(){
 
-  alert("Thank you for donating blood ❤️");
+  alert("Thank you for donating blood ");
 
 });
 
@@ -164,8 +164,8 @@ buttons.forEach(button => {
 });
 
 
+
 //mydonations.js
-=
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -484,5 +484,324 @@ document.addEventListener("DOMContentLoaded", function () {
         strengthText.innerHTML = "Password strength";
 
     });
+
+});
+
+
+
+//dashboard.js
+// ===============================
+// Availability Status Toggle
+// ===============================
+
+const statusBtn = document.getElementById("statusBtn");
+const statusText = document.querySelector(".available");
+
+statusBtn.addEventListener("click", function () {
+
+    if (statusText.innerHTML.includes("Available")) {
+
+        statusText.innerHTML = "● Unavailable";
+        statusText.style.background = "#fde2e2";
+        statusText.style.color = "#c62828";
+        statusBtn.innerHTML = "Set Available";
+
+    } else {
+
+        statusText.innerHTML = "● Available";
+        statusText.style.background = "#dff6e8";
+        statusText.style.color = "#198754";
+        statusBtn.innerHTML = "Set Unavailable";
+
+    }
+
+});
+
+// ===============================
+// Sidebar Active Menu
+// ===============================
+
+const menuItems = document.querySelectorAll(".sidebar ul li");
+
+menuItems.forEach(item => {
+
+    item.addEventListener("click", function () {
+
+        menuItems.forEach(i => i.classList.remove("active"));
+
+        this.classList.add("active");
+
+    });
+
+});
+
+// ===============================
+// Card Hover Animation
+// ===============================
+
+const cards = document.querySelectorAll(".card");
+
+cards.forEach(card => {
+
+    card.addEventListener("mouseenter", () => {
+        card.style.transform = "translateY(-5px)";
+    });
+
+    card.addEventListener("mouseleave", () => {
+        card.style.transform = "translateY(0)";
+    });
+
+});
+
+// ===============================
+// Table Row Hover
+// ===============================
+
+const rows = document.querySelectorAll("tbody tr");
+
+rows.forEach(row => {
+
+    row.addEventListener("mouseenter", () => {
+        row.style.background = "#fafafa";
+    });
+
+    row.addEventListener("mouseleave", () => {
+        row.style.background = "";
+    });
+
+});
+
+// ===============================
+// Welcome Message
+// ===============================
+
+window.addEventListener("load", () => {
+    console.log("Welcome to JeevanConnect Dashboard");
+});
+
+
+
+
+
+//myprofile.js
+// ==========================
+// Donor Availability Toggle
+// ==========================
+
+const toggleBtn = document.getElementById("toggleBtn");
+const status = document.getElementById("status");
+
+toggleBtn.addEventListener("click", function () {
+
+    if (status.innerHTML.includes("Available")) {
+
+        status.innerHTML = "● Unavailable";
+        status.style.background = "#fde2e2";
+        status.style.color = "#c62828";
+        toggleBtn.innerHTML = "Set Available";
+
+    } else {
+
+        status.innerHTML = "● Available";
+        status.style.background = "#dff6e8";
+        status.style.color = "#198754";
+        toggleBtn.innerHTML = "Set Unavailable";
+
+    }
+
+});
+
+// ==========================
+// Upload Photo
+// ==========================
+
+const uploadBtn = document.querySelector(".upload-btn");
+
+uploadBtn.addEventListener("click", function () {
+
+    const input = document.createElement("input");
+
+    input.type = "file";
+    input.accept = "image/*";
+
+    input.click();
+
+    input.onchange = function () {
+
+        if (input.files.length > 0) {
+
+            alert("Photo selected: " + input.files[0].name);
+
+        }
+
+    };
+
+});
+
+// ==========================
+// Save Changes
+// ==========================
+
+const form = document.querySelector("form");
+
+form.addEventListener("submit", function (e) {
+
+    e.preventDefault();
+
+    alert("Profile updated successfully!");
+
+});
+
+// ==========================
+// Cancel Button
+// ==========================
+
+const cancelBtn = document.querySelector(".cancel-btn");
+
+cancelBtn.addEventListener("click", function () {
+
+    if (confirm("Reset all changes?")) {
+
+        form.reset();
+
+    }
+
+});
+
+// ==========================
+// Sidebar Active Menu
+// ==========================
+
+const menuItems = document.querySelectorAll(".sidebar ul li");
+
+menuItems.forEach(item => {
+
+    item.addEventListener("click", function () {
+
+        menuItems.forEach(i => i.classList.remove("active"));
+
+        this.classList.add("active");
+
+    });
+
+});
+
+// ==========================
+// Input Focus Effect
+// ==========================
+
+const inputs = document.querySelectorAll("input, select");
+
+inputs.forEach(input => {
+
+    input.addEventListener("focus", function () {
+
+        this.style.borderColor = "#c62828";
+
+    });
+
+    input.addEventListener("blur", function () {
+
+        this.style.borderColor = "#ddd";
+
+    });
+
+});
+
+// ==========================
+// Page Loaded
+// ==========================
+
+window.onload = function () {
+
+    console.log("My Profile Loaded");
+
+};
+
+
+
+
+
+
+
+// Registration.js
+
+const form = document.getElementById("registerForm");
+
+form.addEventListener("submit", async function (e) {
+
+    e.preventDefault();
+
+    // Get form values
+    const data = {
+        name: document.getElementById("name").value.trim(),
+        email: document.getElementById("email").value.trim(),
+        phone: document.getElementById("phone").value.trim(),
+        userid: document.getElementById("userid").value.trim(),
+        password: document.getElementById("password").value,
+        blood_group: document.getElementById("blood_group").value,
+        age: document.getElementById("age").value,
+        address: document.getElementById("address").value.trim()
+    };
+
+    // Validation
+
+    if (
+        data.name === "" ||
+        data.email === "" ||
+        data.phone === "" ||
+        data.userid === "" ||
+        data.password === "" ||
+        data.blood_group === "" ||
+        data.age === "" ||
+        data.address === ""
+    ) {
+        alert("Please fill all fields.");
+        return;
+    }
+
+    if (data.age < 18) {
+        alert("You must be at least 18 years old.");
+        return;
+    }
+
+    try {
+
+        const response = await fetch("http://127.0.0.1:5000/api/register", {
+
+            method: "POST",
+
+            headers: {
+                "Content-Type": "application/json"
+            },
+
+            body: JSON.stringify(data)
+
+        });
+
+        const result = await response.json();
+
+        if (response.ok) {
+
+            alert("Registration Successful!");
+
+            form.reset();
+
+            // Optional
+             window.location.href = "dashboard.html";
+
+        } else {
+
+            alert(result.message || "Registration Failed.");
+
+        }
+
+    } catch (error) {
+
+        console.error(error);
+
+        alert("Cannot connect to the server.");
+
+    }
 
 });

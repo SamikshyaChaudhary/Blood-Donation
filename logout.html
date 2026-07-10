@@ -1,140 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Change Password | JeevanConnect</title>
+    <title>JeevanConnect - My Profile</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="logout.css">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="myprofile.css">
 </head>
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
+    <!-- ================= HEADER ================= -->
 
-<header class="navbar">
+    <header class="header">
 
-    <div class="logo">
-        <i class="fa-solid fa-droplet"></i>
-        <span>JeevanConnect</span>
-    </div>
-
-    <nav>
-        <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="aboutus.html">About Us</a></li>
-            <li><a href="findonor.html">Find Donors</a></li>
-            <li><a href="requestblood.html">Request Blood</a></li>
-            <li><a href="becomeadonor.html">Become a Donor</a></li>
-            <li><a href="contactus.html">Contact Us</a></li>
-        </ul>
-    </nav>
-
-    <div class="avatar">
-        AS
-    </div>
-
-</header>
-
-<!-- ================= MAIN ================= -->
-
-<div class="container">
-
-    <!-- Sidebar -->
-
-    <aside class="sidebar">
-
-        <h4>DONOR PANEL</h4>
-
-        <ul>
-
-            <li>
-                <a href="dashboard.html">
-                  <i class="fa-solid fa-table-columns"></i>
-                  Dashboard
-                </a>
-            </li>
-
-            <li>
-                <a href="myprofile.html">
-                  <i class="fa-solid fa-user"></i>
-                  My Profile
-                </a>
-            </li>
-
-            <li>
-                <a href="myrequest.html">
-                   <i class="fa-solid fa-bars"></i>
-                   My Requests
-                </a>
-            </li>
-
-            <li>
-                <a href="mydonations.html">
-                   <i class="fa-solid fa-heart"></i>
-                   My Donations
-                </a>
-            </li>
-
-            <li>
-                <a href="changepassword.html">
-                  <i class="fa-solid fa-lock"></i>
-                  Change Password
-                </a>
-            </li>
-
-        </ul>
-
-        <!-- Logout Button -->
-        <div class="logout" id="logoutBtn">
-            <i class="fa-solid fa-right-from-bracket"></i>
-            Logout
+        <div class="logo">
+            <i class="fa-solid fa-droplet"></i>
+            <span>JeevanConnect</span>
         </div>
 
-    </aside>
+        <nav class="navbar">
 
-    
+            <a href="home.html">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="findDonor.html">Find Donors</a>
+            <a href="requestBlood.html">Request Blood</a>
+            <a href="becomeDonor.html">Become a Donor</a>
+            <a href="contactus.html">Contact Us</a>
 
-<!-- ================= LOGOUT MODAL ================= -->
+        </nav>
 
-<div class="modal" id="logoutModal">
-
-    <div class="modal-box">
-
-        <div class="modal-icon">
-
-            <i class="fa-solid fa-power-off"></i>
-
+        <div class="profile-circle">
+            AS
         </div>
 
-        <h2>Log out of JeevanConnect?</h2>
+    </header>
 
-        <p>
-            You'll need to sign in again to access your donor dashboard.
-        </p>
+    <!-- ================= CONTAINER ================= -->
 
-        <div class="modal-buttons">
+    <div class="container">
 
-            <button class="cancel-btn" id="cancelBtn">
-                Cancel
-            </button>
+        <!-- Sidebar -->
 
-            <button class="logout-confirm" id="confirmLogout">
-                Logout
-            </button>
+        <aside class="sidebar">
 
-        </div>
+            <h4>DONOR PANEL</h4>
 
-    </div>
+            <ul>
 
-</div>
+                <li>
+                    <a href="dashboard.html">
+                        <i class="fa-solid fa-table-columns"></i>
+                        Dashboard
+                    </a>
+                </li>
 
-<script src="logout.js"></script>
+                <li>
+                    <a href="myprofile.html">
+                        <i class="fa-solid fa-user"></i>
+                        My Profile
+                    </a>
+                </li>
 
-</body>
-</html>
+                <li>
+                    <a href="myrequests.html">
+                        <i class="fa-solid fa-bars"></i>
+                        My Requests
+                    </a>
+                </li>
+
+                <li>
+                    <a href="mydonations.html">
+                        <i class="fa-solid fa-location-dot"></i>
+                        My Donations
+                    </a>
+                </li>
+
+                <li>
+                    <a href="changepassword.html">
+                        <i class="fa-solid fa-lock"></i>
+                        Change Password
+                    </a>
+                </li>
+
+            </ul>
+
+            <ul class="logout">
+                <li class="active">
+                    <a href="logout.html">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        Logout
+                    </a>
+                </li>
+            </ul>
+
+        </aside>

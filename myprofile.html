@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JeevanConnect - My Profile</title>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="myprofile.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="logo">
+            <i class="fa-solid fa-droplet"></i>
+            <span>JeevanConnect</span>
+        </div>
+
+        <nav class="navbar">
+
+            <a href="home.html">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="findDonor.html">Find Donors</a>
+            <a href="requestBlood.html">Request Blood</a>
+            <a href="becomeDonor.html">Become a Donor</a>
+            <a href="contactus.html">Contact Us</a>
+
+        </nav>
+
+        <div class="profile-circle">
+            AS
+        </div>
+
+    </header>
+
+    <!-- ================= CONTAINER ================= -->
+
+    <div class="container">
+
+        <!-- Sidebar -->
+
+        <aside class="sidebar">
+
+            <h4>DONOR PANEL</h4>
+
+            <ul>
+
+                <li>
+                    <a href="dashboard.html">
+                        <i class="fa-solid fa-table-columns"></i>
+                        Dashboard
+                    </a>
+                </li>
+
+                <li class="active">
+                    <a href="myprofile.html">
+                        <i class="fa-solid fa-user"></i>
+                        My Profile
+                    </a>
+                </li>
+
+                <li>
+                    <a href="myrequests.html">
+                        <i class="fa-solid fa-bars"></i>
+                        My Requests
+                    </a>
+                </li>
+
+                <li>
+                    <a href="mydonations.html">
+                        <i class="fa-solid fa-location-dot"></i>
+                        My Donations
+                    </a>
+                </li>
+
+                <li>
+                    <a href="changepassword.html">
+                        <i class="fa-solid fa-lock"></i>
+                        Change Password
+                    </a>
+                </li>
+
+            </ul>
+
+            <div class="logout">
+
+                <a href="logout.html">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Logout
+                </a>
+
+            </div>
+
+        </aside>
+
+        <!-- Main Content -->
+
+        <main class="content">
+
+            <h1>My Profile</h1>
+
+            <p class="subtitle">
+                Manage your personal details and donor information.
+            </p>
+
+            <!-- Profile Card -->
+
+            <div class="profile-card">
+
+                <div class="profile-left">
+
+                    <div class="avatar">
+                        AS
+                    </div>
+
+                    <div>
+
+                        <h2>Aman Shrestha</h2>
+
+                        <p>
+                            Donor since May 10, 2024
+                            <span class="blood-type">O+ Donor</span>
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <button class="upload-btn">
+                    Upload Photo
+                </button>
+
+            </div>
+
+            <!-- Personal Information -->
+
+            <div class="form-card">
+
+                <h2>Personal Information</h2>
+
+                <form>
+
+                    <div class="form-grid">
+
+                        <div class="input-box">
+                            <label>Full Name</label>
+                            <input type="text" title="Full Name" value="Aman Shrestha">
+                        </div>
+
+                        <div class="input-box">
+                            <label>Phone Number</label>
+                            <input type="text" title="Phone Number" value="9841234567">
+                        </div>
+
+                        <div class="input-box">
+                            <label>Email Address</label>
+                            <input type="email" title="Email Address" value="aman.shrestha@email.com">
+                        </div>
+
+                        <div class="input-box">
+                            <label>Date of Birth</label>
+                            <input type="date" title="Date of Birth" value="1999-12-01">
+                        </div>
+
+                        <div class="input-box">
+                            <label>Blood Group</label>
+
+                            <select title="Blood Group">
+
+                                <option>O+</option>
+                                <option>O-</option>
+                                <option>A+</option>
+                                <option>A-</option>
+                                <option>B+</option>
+                                <option>B-</option>
+                                <option>AB+</option>
+                                <option>AB-</option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="input-box">
+
+                            <label>Gender</label>
+
+                            <select title="Gender">
+
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Other</option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="input-box">
+
+                            <label>Province</label>
+
+                            <select title="Province">
+
+                                <option>Lumbini Province</option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="input-box">
+
+                            <label>District</label>
+
+                            <input type="text" title="District" value="Rupandehi">
+
+                        </div>
+
+                        <div class="input-box full-width">
+
+                            <label>City / Municipality</label>
+
+                            <input type="text" title="City / Municipality" value="Butwal">
+
+                        </div>
+
+                    </div>
+
+                    <div class="buttons">
+
+                        <button type="submit" class="save-btn">
+                            Save Changes
+                        </button>
+
+                        <button type="reset" class="cancel-btn">
+                            Cancel
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+            <!-- Availability -->
+
+            <div class="availability-card">
+
+                <div>
+
+                    <h2>Donor Availability</h2>
+
+                    <p>
+                        Let nearby patients and hospitals know whether you are
+                        ready to donate right now.
+                    </p>
+
+                    <span id="status" class="available">
+                        ● Available
+                    </span>
+
+                </div>
+
+                <button id="toggleBtn">
+                    Set Unavailable
+                </button>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="my_profile.js"></script>
+
+</body>
+
+</html>
