@@ -1,8 +1,3 @@
-/* ===========================
-   Google Font
-=========================== */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -11,80 +6,77 @@
 }
 
 body {
-    background: #f6f7fb;
+    background: #f7f5f5;
     color: #222;
 }
 
 /* ===========================
-   Navbar
+   Header
 =========================== */
 
-.navbar {
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 75px;
+    height: 70px;
     background: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 40px;
-    border-bottom: 1px solid #ececec;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
+    padding: 0 35px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .05);
+    z-index: 1000;
 }
 
 .logo {
     display: flex;
     align-items: center;
     gap: 10px;
+    color: #c62828;
     font-size: 28px;
-    color: #c40018;
     font-weight: 700;
 }
 
 .logo span {
-    font-size: 28px;
+    font-size: 18px;
 }
 
-.navbar ul {
+.navbar {
     display: flex;
-    list-style: none;
-    gap: 40px;
+    gap: 35px;
 }
 
-.navbar ul li a {
+.navbar a {
     text-decoration: none;
-    color: #333;
-    font-size: 16px;
-    font-weight: 500;
+    color: #222;
+    font-size: 15px;
     transition: .3s;
 }
 
-.navbar ul li a:hover {
-    color: #c40018;
+.navbar a:hover {
+    color: #c62828;
 }
 
-.avatar {
-    width: 50px;
-    height: 50px;
-    background: #a40014;
-    color: #fff;
+.profile-circle {
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
+    background: #c62828;
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: 600;
-    cursor: pointer;
 }
 
 /* ===========================
-   Main Layout
+   Main Container
 =========================== */
 
 .container {
     display: flex;
-    margin-top: 75px;
+    margin-top: 70px;
 }
 
 /* ===========================
@@ -92,53 +84,60 @@ body {
 =========================== */
 
 .sidebar {
-    width: 260px;
+    width: 250px;
+    min-height: calc(100vh - 70px);
     background: #fff;
-    min-height: calc(100vh - 75px);
-    border-right: 1px solid #ececec;
-    padding: 25px;
+    padding: 25px 15px;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, .04);
 }
 
 .sidebar h4 {
     color: #777;
-    margin-bottom: 30px;
+    font-size: 13px;
+    margin-bottom: 20px;
     letter-spacing: 1px;
-    font-size: 14px;
 }
 
 .sidebar ul {
     list-style: none;
 }
 
-.sidebar ul li {
+.sidebar li {
+    margin-bottom: 12px;
+}
+
+.sidebar li a {
     display: flex;
     align-items: center;
-    gap: 15px;
-    padding: 15px;
-    margin-bottom: 12px;
+    gap: 12px;
+    text-decoration: none;
+    color: #222;
+    padding: 13px 14px;
     border-radius: 10px;
-    cursor: pointer;
     transition: .3s;
     font-weight: 500;
 }
 
-.sidebar ul li:hover {
+.sidebar li a:hover {
     background: #f3f3f3;
 }
 
-.sidebar ul li.active a {
-    background: #b80014;
+.sidebar li.active a {
+    background: #c62828;
     color: #fff;
 }
 
 .logout {
     margin-top: 40px;
-    color: #b80014;
+}
+
+.logout a {
+    text-decoration: none;
+    color: #b71c1c;
     display: flex;
-    align-items: center;
     gap: 12px;
+    align-items: center;
     font-weight: 600;
-    cursor: pointer;
 }
 
 /* ===========================

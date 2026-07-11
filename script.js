@@ -1,5 +1,5 @@
+//home.js
 // Donate Button
-
 document.querySelector(".donate-btn")
 .addEventListener("click", function(){
 
@@ -19,106 +19,62 @@ document.querySelector(".find-btn")
 
 
 
-//login page.js
-// PASSWORD SHOW / HIDE
+//login.js
+// Wait until the page is fully loaded
+document.addEventListener("DOMContentLoaded", function () {
 
-let password =
-document.getElementById("password");
+    // Get elements
+    const loginForm = document.getElementById("loginForm");
+    const email = document.getElementById("email");
+    const password = document.getElementById("password");
 
-let toggle =
-document.getElementById("togglePassword");
+    // Login button
+    loginForm.addEventListener("submit", function (e) {
+        e.preventDefault();
 
-toggle.addEventListener("click", function(){
+        // Check empty fields
+        if (email.value.trim() === "") {
+            alert("Please enter your email.");
+            email.focus();
+            return;
+        }
 
-  if(password.type === "password"){
+        if (password.value.trim() === "") {
+            alert("Please enter your password.");
+            password.focus();
+            return;
+        }
 
-    password.type = "text";
+        // Login successful
+        alert("Login Successful!");
 
-    toggle.classList.remove("fa-eye");
-    toggle.classList.add("fa-eye-slash");
+        // Open Dashboard
+        window.location.href = "dashboard.html";
+    });
 
-  }
+    // Register link
+    const register = document.querySelector(".register-text span");
+    if (register) {
+        register.style.cursor = "pointer";
 
-  else{
+        register.addEventListener("click", function () {
+            window.location.href = "registration.html";
+        });
+    }
 
-    password.type = "password";
-
-    toggle.classList.remove("fa-eye-slash");
-    toggle.classList.add("fa-eye");
-
-  }
-
-});
-
-// LOGIN FORM
-
-document.getElementById("loginForm")
-.addEventListener("submit", function(event){
-
-  event.preventDefault();
-
-  let email =
-  document.getElementById("email").value;
-
-  let passwordValue =
-  document.getElementById("password").value;
-
-  if(email === "" || passwordValue === ""){
-
-    alert("Please fill all fields");
-
-  }
-
-  else{
-
-    alert("Login Successful");
-
-  }
-
-});
-
-
-
-//dashboard.js
-const btn = document.getElementById("statusBtn");
-const badge = document.getElementById("statusBadge");
-
-btn.addEventListener("click", () => {
-
-    if(badge.innerText === "Available"){
-
-        badge.innerText = "Unavailable";
-        badge.style.background = "#ffdede";
-        badge.style.color = "#d62828";
-
-    }else{
-
-        badge.innerText = "Available";
-        badge.style.background = "#e7f3d6";
-        badge.style.color = "#4d7d28";
-
+    // Forgot Password
+    const forgot = document.querySelector(".forgot");
+    if (forgot) {
+        forgot.addEventListener("click", function (e) {
+            e.preventDefault();
+            alert("Forgot Password feature is coming soon.");
+        });
     }
 
 });
 
 
-//myprofile.js
-function saveProfile() {
-    alert("Profile Updated Successfully!");
-}
 
-const menuItems = document.querySelectorAll(".si");
-
-menuItems.forEach(item => {
-    item.addEventListener("click", () => {
-
-        menuItems.forEach(i => {
-            i.classList.remove("active");
-        });
-
-        item.classList.add("active");
-    });
-});
 
 
 //myrequests.js

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,45 +11,12 @@
   <link rel="stylesheet" href="style.css">
 
   <!-- Font Awesome -->
-  <link rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
-  <header>
 
 
-    <nav class="nav">
-      <div class="logo">
-        <i class="fas fa-droplet"></i>
-        JeevanConnect
-      </div>
-
-      <div class="navigation">
-
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="aboutus.html">About Us</a></li>
-          <li><a href="findDonor.html">Find Donors</a></li>
-          <li><a href="requestBlood.html">Request Blood</a></li>
-          <li><a href="becomeDonor.html">Become a Donor</a></li>
-          <li><a href="contactus.html">Contact Us</a></li>
-        </ul>
-      </div>
-
-      <div class="auth-buttons">
-        <a href = "login.html">
-        <button class="btn login">Login</button></a>
-        <a href = "registration.html">
-        <button class="btn register">Register</button></a>
-
-      </div>
-    </nav>
-    
-
-  </header>
-
-  <h1 class="page-title">Login Page</h1>
 
   <section class="login-section">
 
@@ -58,11 +26,11 @@
     <!-- Login Box -->
     <div class="login-container">
 
-      <!-- Logo -->
-      <div class="logo">
-        <i class="fa-solid fa-droplet"></i>
-        <h2>JeevanConnect</h2>
+      <div class="login-logo">
+        <i class="fas fa-droplet"></i>
+        <p class="logo-text">JeevanConnect</p>
       </div>
+
 
       <!-- Heading -->
       <h1>Welcome Back!</h1>
@@ -76,9 +44,7 @@
 
           <label>Email</label>
 
-          <input type="email"
-          id="email"
-          placeholder="Enter your email">
+          <input type="email" id="email" placeholder="Enter your email" required>
 
         </div>
 
@@ -89,13 +55,7 @@
 
           <div class="password-field">
 
-            <input type="password"
-            id="password"
-            placeholder="Enter your password">
-
-            <i class="fa-regular fa-eye"
-            id="togglePassword"></i>
-
+            <input type="password" id="password" placeholder="Enter your password" required>
           </div>
 
         </div>
@@ -108,16 +68,16 @@
       </form>
 
       <!-- Forgot -->
-      <a href="#" class="forgot">
+      <!-- <a href="#" class="forgot">
         Forgot Password?
-      </a>
+      </a> -->
 
       <hr>
 
       <!-- Register -->
       <p class="register-text">
         Don't have an account?
-        <span>Register</span>
+        <a href="registration.html" style="color:#ef4444">Register</a>
       </p>
 
     </div>
@@ -125,7 +85,47 @@
   </section>
 
   <!-- JS -->
-  <script src="script.js"></script>
+  <script>
+    const loginForm = document.getElementById("loginForm");
+
+    loginForm.addEventListener("submit", function (e) {
+
+      e.preventDefault();
+
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      const errorMessage = document.getElementById("errorMessage");
+
+      // Demo account
+      const demoEmail = "samikshya@gmail.com";
+      const demoPassword = "123456";
+
+      if (email === "" || password === "") {
+
+        errorMessage.textContent = "Please enter email and password.";
+        return;
+
+      }
+
+      if (email === demoEmail && password === demoPassword) {
+
+        // Save login status
+        localStorage.setItem("isLoggedIn", "true");
+        localStorage.setItem("username", "Aman Shrestha");
+
+        // Redirect
+        window.location.href = "dashboard.html";
+
+      } else {
+
+        errorMessage.textContent = "Invalid email or password.";
+
+      }
+
+    });
+  </script>
 
 </body>
+
 </html>

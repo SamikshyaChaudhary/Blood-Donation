@@ -1,60 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Donations | JeevanConnect</title>
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="mydonations.css">
+    <title>JeevanConnect - My Donations</title>
 
     <!-- Font Awesome -->
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="mydonations.css">
 </head>
+
 <body>
 
-    <!-- ===================== NAVBAR ===================== -->
+    <!-- ================= HEADER ================= -->
 
-    <header class="navbar">
+    <header class="header">
 
         <div class="logo">
             <i class="fa-solid fa-droplet"></i>
             <span>JeevanConnect</span>
         </div>
 
-        <nav>
-
-            <ul>
-
-                <li><a href="home.html">Home</a></li>
-                <li><a href="aboutus.html">About Us</a></li>
-                <li><a href="findDonor.html">Find Donors</a></li>
-                <li><a href="requestBlood.html">Request Blood</a></li>
-                <li><a href="becomeDonor.html">Become a Donor</a></li>
-                <li><a href="contactus.html">Contact Us</a></li>
-
-            </ul>
-
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="findDonor.html">Find Donors</a>
+            <a href="requestBlood.html">Request Blood</a>
+            <a href="becomeDonor.html">Become a Donor</a>
+            <a href="contactus.html">Contact Us</a>
         </nav>
 
-        <div class="profile">
-
-            <div class="avatar">
-                AS
-            </div>
-
+        <div class="profile-circle">
+            AS
         </div>
 
     </header>
 
-
-    <!-- ===================== MAIN CONTAINER ===================== -->
+    <!-- ================= MAIN ================= -->
 
     <div class="container">
 
-
-        <!-- ===================== SIDEBAR ===================== -->
+        <!-- Sidebar -->
 
         <aside class="sidebar">
 
@@ -71,7 +61,7 @@
 
                 <li>
                     <a href="myprofile.html">
-                        <i class="fa-solid fa-user"></i>
+                        <i class="fa-regular fa-user"></i>
                         My Profile
                     </a>
                 </li>
@@ -85,7 +75,7 @@
 
                 <li class="active">
                     <a href="mydonations.html">
-                        <i class="fa-solid fa-heart"></i>
+                        <i class="fa-regular fa-heart"></i>
                         My Donations
                     </a>
                 </li>
@@ -100,10 +90,12 @@
             </ul>
 
             <div class="logout">
+
                 <a href="logout.html">
                     <i class="fa-solid fa-right-from-bracket"></i>
                     Logout
                 </a>
+
             </div>
 
         </aside>
