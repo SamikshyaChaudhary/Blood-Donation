@@ -318,6 +318,108 @@ body {
 }
 
 /* ===========================
+   Logout Modal
+=========================== */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+    z-index: 999;
+}
+
+.modal.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-content {
+    width: 380px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    animation: popup .3s ease;
+}
+
+@keyframes popup {
+    from {
+        transform: scale(.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.modal-icon {
+    width: 70px;
+    height: 70px;
+    margin: auto;
+    border-radius: 50%;
+    background: #ffe5e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    color: #d62828;
+}
+
+.modal-content h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.modal-content p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.cancel-btn,
+.logout-btn {
+    padding: 12px 28px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: .3s;
+}
+
+.cancel-btn {
+    background: #ddd;
+}
+
+.cancel-btn:hover {
+    background: #c7c7c7;
+}
+
+.logout-btn {
+    background: #d62828;
+    color: #fff;
+}
+
+.logout-btn:hover {
+    background: #b71c1c;
+}
+
+/* ===========================
    Responsive
 =========================== */
 

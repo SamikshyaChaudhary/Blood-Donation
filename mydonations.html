@@ -29,7 +29,7 @@
             <a href="index.html">Home</a>
             <a href="aboutus.html">About Us</a>
             <a href="findDonor.html">Find Donors</a>
-            <a href="requestBlood.html">Request Blood</a>
+            <!-- <a href="requestBlood.html">Request Blood</a> -->
             <a href="becomeDonor.html">Become a Donor</a>
             <a href="contactus.html">Contact Us</a>
         </nav>
@@ -66,12 +66,12 @@
                     </a>
                 </li>
 
-                <li>
+                <!-- <li>
                     <a href="myrequests.html">
                         <i class="fa-solid fa-bars"></i>
                         My Requests
                     </a>
-                </li>
+                </li> -->
 
                 <li class="active">
                     <a href="mydonations.html">
@@ -89,13 +89,11 @@
 
             </ul>
 
-            <div class="logout">
-
-                <a href="logout.html">
+         <div class="logout">
+                <a href="#" id="logoutBtn">
                     <i class="fa-solid fa-right-from-bracket"></i>
                     Logout
                 </a>
-
             </div>
 
         </aside>
@@ -305,7 +303,37 @@
 
     </div>
 
+  <!-- Logout Confirmation Modal -->
+    <div class="modal" id="logoutModal">
 
+        <div class="modal-content">
+
+            <div class="modal-icon">
+                <i class="fa-solid fa-right-from-bracket"></i>
+            </div>
+
+            <h2>Logout</h2>
+
+            <p>
+                Are you sure you want to logout?
+            </p>
+
+            <div class="modal-buttons">
+
+                <button id="cancelLogout" class="cancel-btn">
+                    Cancel
+                </button>
+
+                <button id="confirmLogout" class="logout-btn">
+                    Logout
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+    <script src="logout.js"></script>
     <script src="script.js"></script>
 
 </body>

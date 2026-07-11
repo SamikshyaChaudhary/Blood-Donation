@@ -360,57 +360,10 @@
     </div>
 
     <!-- JavaScript -->
+     <script src="logout.js"></script>
     <script src="script.js"></script>
-    <script>
-        // ===========================
-        // Logout Modal
-        // ===========================
 
-        const logoutBtn = document.getElementById("logoutBtn");
-        const logoutModal = document.getElementById("logoutModal");
-
-        const cancelLogout = document.getElementById("cancelLogout");
-        const confirmLogout = document.getElementById("confirmLogout");
-
-        // Open Modal
-        logoutBtn.addEventListener("click", function (e) {
-
-            e.preventDefault();
-
-            logoutModal.classList.add("show");
-
-        });
-
-        // Cancel
-        cancelLogout.addEventListener("click", function () {
-
-            logoutModal.classList.remove("show");
-
-        });
-
-        // Close when clicking outside
-        window.addEventListener("click", function (e) {
-
-            if (e.target === logoutModal) {
-
-                logoutModal.classList.remove("show");
-
-            }
-
-        });
-
-        // Confirm Logout
-        confirmLogout.addEventListener("click", function () {
-
-            // Remove login information if you store it
-            localStorage.removeItem("loggedInUser");
-            sessionStorage.clear();
-
-            // Redirect to Login Page
-            window.location.href = "login.html";
-
-        });
-    </script>
+ 
 
 </body>
 
